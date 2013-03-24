@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B0866443-6CCD-4FE0-AE3E-E84712ED7077}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>kinect_modelling</RootNamespace>
+    <ProjectName>Taifho</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\boost\boost_1_47;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\boost\boost_1_47;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;wsock32.lib;mpr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\boost\boost_1_47\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\boost\boost_1_47\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AvailableMovesEvent.cpp" />
+    <ClCompile Include="board.cpp" />
+    <ClCompile Include="Board_g.cpp" />
+    <ClCompile Include="cell.cpp" />
+    <ClCompile Include="Cell_g.cpp" />
+    <ClCompile Include="circle_geom.cpp" />
+    <ClCompile Include="circle_piece.cpp" />
+    <ClCompile Include="diamond_geom.cpp" />
+    <ClCompile Include="diamond_piece.cpp" />
+    <ClCompile Include="empty_piece.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="Game_object.cpp" />
+    <ClCompile Include="game_piece.cpp" />
+    <ClCompile Include="logic_interface.cpp" />
+    <ClCompile Include="Main_code.cpp" />
+    <ClCompile Include="MoveEvent.cpp" />
+    <ClCompile Include="Mqueue.cpp" />
+    <ClCompile Include="PassEvent.cpp" />
+    <ClCompile Include="Piece.cpp" />
+    <ClCompile Include="player_id.cpp" />
+    <ClCompile Include="RGBpixmap.cpp" />
+    <ClCompile Include="square_geom.cpp" />
+    <ClCompile Include="square_piece.cpp" />
+    <ClCompile Include="triangle_piece.cpp" />
+    <ClCompile Include="triang_geom.cpp" />
+    <ClCompile Include="vector_2d.cpp" />
+    <ClCompile Include="WinEvent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AvailableMovesEvent.h" />
+    <ClInclude Include="board.h" />
+    <ClInclude Include="BoardEvent.h" />
+    <ClInclude Include="cell.h" />
+    <ClInclude Include="circle_geom.h" />
+    <ClInclude Include="circle_piece.h" />
+    <ClInclude Include="diamond_geom.h" />
+    <ClInclude Include="diamond_piece.h" />
+    <ClInclude Include="empty_piece.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="game_piece.h" />
+    <ClInclude Include="logic_interface.h" />
+    <ClInclude Include="Material_components.h" />
+    <ClInclude Include="MoveEvent.h" />
+    <ClInclude Include="Mqueue.h" />
+    <ClInclude Include="my_time.h" />
+    <ClInclude Include="Board_g.h" />
+    <ClInclude Include="Cell_g.h" />
+    <ClInclude Include="Game_object.h" />
+    <ClInclude Include="PassEvent.h" />
+    <ClInclude Include="Piece.h" />
+    <ClInclude Include="pick.h" />
+    <ClInclude Include="player_id.h" />
+    <ClInclude Include="Player_info.h" />
+    <ClInclude Include="RGBpixmap.h" />
+    <ClInclude Include="square_geom.h" />
+    <ClInclude Include="square_piece.h" />
+    <ClInclude Include="triangle_piece.h" />
+    <ClInclude Include="triang_geom.h" />
+    <ClInclude Include="vector_2d.h" />
+    <ClInclude Include="vertex_struct.h" />
+    <ClInclude Include="WinEvent.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
